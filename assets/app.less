@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 微软雅黑, MicrosoftYaHei;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  position: inherit;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.except-header-container {
+  width: 100%;
+  height: calc(~'100% - 60px');
+  display: flex;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ccc;
+}
+
+.default-add-modal {
+  .ant-modal-content {
+    border-radius: 8px !important;
+
+    .ant-modal-close {
+      z-index: 9999;
+
+      .ant-modal-close-x {
+        color: #fff;
+      }
+    }
+
+    .ant-modal-header {
+      position: relative;
+
+      .ant-modal-title {
+        position: relative;
+        top: -3px;
+        z-index: 8888;
+        color: #fff;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -24px;
+        right: -24px;
+        height: 52px;
+        background: url('~public/imgs/modalTitleBack.png') no-repeat;
+        background-position: right;
+        background-color: #50639c;
+        box-shadow: 0px 0px 8px 0px rgba(19, 43, 107, 0.2);
+        border-radius: 8px 8px 0px 0px;
+      }
+    }
+  }
+}
+
+.ant-drawer .ant-drawer-header-title .ant-drawer-close {
+  padding: 3px;
+  &:hover {
+    background-color: red;
+  }
+}
+
+.default-detail-drawer {
+  .ant-drawer-header {
+    background: url('~public/imgs/modalTitleBack.png') no-repeat;
+    background-position: right;
+    background-color: #50639c;
+    box-shadow: 0px 0px 8px 0px rgba(19, 43, 107, 0.2);
+    .ant-drawer-close .anticon-close,
+    .ant-drawer-title {
+      color: #fff;
+    }
+  }
+}

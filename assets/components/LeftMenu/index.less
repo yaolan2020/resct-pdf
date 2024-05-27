@@ -1,0 +1,47 @@
+.left-menu {
+  width: 236px;
+  height: 100%;
+
+  > .open-menu {
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .ant-menu {
+    height: calc(~'100% - 32px');
+    overflow: auto;
+
+    .ant-menu-item {
+      width: 100%;
+      margin: 0;
+    }
+    .ant-menu-item-selected {
+      background: rgba(62, 113, 249, 0.12);
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: #3e71f9;
+        border-radius: 0px 2px 2px 0px;
+      }
+    }
+  }
+  .ant-menu-inline-collapsed {
+    width: 50px;
+  }
+  .ant-menu-vertical .ant-menu-submenu-title {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.left-menu-collapsed {
+  width: 50px;
+}

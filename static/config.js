@@ -1,4 +1,4 @@
 var globalConfig = Object.assign(
   {
-    systemName: '杭州市行政区域'
+    systemName: 'pdf预览框选截图复制张贴'
   }, apiConfig);
